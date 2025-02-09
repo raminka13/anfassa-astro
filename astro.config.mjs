@@ -6,10 +6,12 @@ import tailwindcss from "@tailwindcss/vite";
 
 import sitemap from "@astrojs/sitemap";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://anfassa.com",
-  integrations: [react(), sitemap()],
+  integrations: [react(), sitemap(), partytown()],
 
   vite: {
     plugins: [tailwindcss()],
