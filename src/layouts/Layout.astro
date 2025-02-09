@@ -14,6 +14,24 @@ const { pageTitle } = Astro.props;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+
+    <meta
+      name="description"
+      content="ANFASSA es un fotografo profesional que se especializa en fotografia de bodas, eventos y retratos. Con sede en la Ciudad de Mexico, ANFASSA ha trabajado con clientes de todo el mundo."
+    />
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LYET44M9WE"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LYET44M9WE");
+    </script>
   </head>
   <body class="">
     <div
