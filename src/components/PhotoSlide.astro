@@ -2,7 +2,7 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
-const { imagePath, imageAlt } = Astro.props;
+const { imagePath, imageAlt, imagePosition } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}"
 );
@@ -12,13 +12,41 @@ if (!images[imagePath])
   );
 ---
 
-<div class="flex justify-center items-center w-full h-full bg-black">
-  <Image
-    src={images[imagePath]()}
-    alt={imageAlt}
-    class="w-full h-full object-cover object-center"
-    quality={60}
-    loading="eager"
-    layout="responsive"
-  />
+<div class="flex justify-center items-center w-full h-full bg-gray-300">
+  {
+    imagePosition === "center" && (
+      <Image
+        src={images[imagePath]()}
+        alt={imageAlt}
+        class="w-full h-full object-cover object-center"
+        quality={60}
+        loading="eager"
+        layout="responsive"
+      />
+    )
+  }
+  {
+    imagePosition === "left" && (
+      <Image
+        src={images[imagePath]()}
+        alt={imageAlt}
+        class="w-full h-full object-cover object-left lg:object-center"
+        quality={60}
+        loading="eager"
+        layout="responsive"
+      />
+    )
+  }
+  {
+    imagePosition === "right" && (
+      <Image
+        src={images[imagePath]()}
+        alt={imageAlt}
+        class="w-full h-full object-cover object-right lg:object-center"
+        quality={60}
+        loading="eager"
+        layout="responsive"
+      />
+    )
+  }
 </div>

@@ -4,6 +4,7 @@ import PhotoSlide from "./PhotoSlide.astro";
 interface Card {
   imagePath: string;
   imageAlt: string;
+  imagePosition: string;
 }
 
 const { data } = Astro.props;
@@ -15,7 +16,11 @@ const { data } = Astro.props;
       {
         data.cards.map((photo: Card) => (
           <div class="swiper-slide">
-            <PhotoSlide imagePath={photo.imagePath} imageAlt={photo.imageAlt} />
+            <PhotoSlide
+              imagePath={photo.imagePath}
+              imageAlt={photo.imageAlt}
+              imagePosition={photo.imagePosition}
+            />
           </div>
         ))
       }
