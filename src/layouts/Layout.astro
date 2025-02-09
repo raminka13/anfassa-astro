@@ -1,22 +1,60 @@
+---
+import ImageComp from "../components/ImageComp.astro";
+import "../styles/global.css";
+
+const { pageTitle } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/camera.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="">
+    <div
+      id="overlay"
+      class="absolute z-50 inset-0 bg-white flex justify-center items-center opacity-100 duration-[2.7s] ease-in"
+    >
+      <ImageComp
+        imagePath="/src/assets/ANFASSA.png"
+        imageAlt="ANFASSA"
+        styles="h-52 w-auto"
+        loading="eager"
+      />
+    </div>
+    <div
+      id="logo"
+      class="absolute z-50 w-full bottom-6 flex justify-center items-center opacity-0 duration-1000 ease-in"
+    >
+      <ImageComp
+        imagePath="/src/assets/ANFASSA.png"
+        imageAlt="ANFASSA"
+        styles="h-44 w-auto invert drop-shadow-md"
+        loading="eager"
+      />
+    </div>
+    <slot />
+  </body>
 </html>
+<script>
+  if (typeof window !== "undefined") {
+    window.addEventListener("load", () => {
+      const overlay = document.querySelector("#overlay") as HTMLDivElement;
+      const logo = document.querySelector("#logo") as HTMLDivElement;
+      if (overlay) {
+        overlay.classList.remove("opacity-100");
+        overlay.classList.add("opacity-0");
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+        setTimeout(() => {
+          overlay.style.display = "none";
+          logo.classList.remove("opacity-0");
+          logo.classList.add("opacity-100");
+        }, 3000);
+      }
+    });
+  }
+</script>
