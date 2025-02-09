@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import SwiperFullscreen from "../components/SwiperFullscreen.astro";
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const home = {
+  cards: [
+    {
+      imagePath: "/src/assets/toscani -B yN.jpg",
+      imageAlt: "Anfassa - Concepto sin palabras - Retrato de Oliviero Toscani",
+    },
+    {
+      imagePath: "/src/assets/vivir-sin-aire.jpg",
+      imageAlt:
+        "Anfassa - Concepto sin palabras - Vivir Sin Aire - Fotografía de Moda",
+    },
+    {
+      imagePath: "/src/assets/retratomindo-face.jpg",
+      imageAlt: "Anfassa - Concepto sin palabras - Retrato del Mindo",
+    },
+    {
+      imagePath: "/src/assets/macedonia-de-frutas.jpg",
+      imageAlt:
+        "Anfassa - Concepto sin palabras - Macedonia de frutas - Fotografía de alimentos",
+    },
+    {
+      imagePath: "/src/assets/jessica-cediel-FIDES.jpg",
+      imageAlt: "Anfassa - Concepto sin palabras - Retrato de Jessica Cediel",
+    },
+    {
+      imagePath: "/src/assets/ardilla-NY.jpg",
+      imageAlt: "Anfassa - Concepto sin palabras - Ardilla en Central Park",
+    },
+    {
+      imagePath: "/src/assets/_AFS0933.jpg",
+      imageAlt: "Anfassa - Concepto sin palabras - Fotografía arquitectónica",
+    },
+    {
+      imagePath: "/src/assets/anfassa-foto-41.jpg",
+      imageAlt: "Anfassa - Concepto sin palabras - Retrato Anfassa",
+    },
+  ],
+};
 ---
 
-<Layout>
-	<Welcome />
+<Layout pageTitle="Anfassa | Concepto Sin Palabras">
+  <SwiperFullscreen data={home} />
+  <script src="../scripts/swiperFull.js"></script>
 </Layout>
