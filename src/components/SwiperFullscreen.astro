@@ -1,0 +1,29 @@
+---
+import PhotoSlide from "./PhotoSlide.astro";
+
+interface Card {
+  imagePath: string;
+  imageAlt: string;
+}
+
+const { data } = Astro.props;
+---
+
+<section class="h-screen w-full overflow-hidden">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {
+        data.cards.map((photo: Card) => (
+          <div class="swiper-slide">
+            <PhotoSlide imagePath={photo.imagePath} imageAlt={photo.imageAlt} />
+          </div>
+        ))
+      }
+    </div>
+    <div class="hidden lg:block">
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
