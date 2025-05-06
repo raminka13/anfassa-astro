@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modules: [Navigation, Pagination, Autoplay, EffectFade],
     spaceBetween: 30,
     autoplay: {
-      delay: 4500,
+      delay: 3600,
       disableOnInteraction: false,
     },
     loop: true,
