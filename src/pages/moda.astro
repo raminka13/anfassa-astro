@@ -1,0 +1,109 @@
+---
+import SwiperFullscreen from "../components/SwiperFullscreen.astro";
+import Layout from "../layouts/Layout.astro";
+
+const home = {
+  cards: [
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-ALEJANDRO.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Alejandro",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-ANA KARINA B Y N.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Ana Karina",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-Aura Cristina by ANFASSA.jpg",
+      imagePosition: "left",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Aura Cristina",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-Aura Cristina rojo by ANFASSA.jpg",
+      imagePosition: "right",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Aura Cristina",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-CARLOS CALERO B Y NEGRO.jpg",
+      imagePosition: "right",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Carlos Calero",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-Copia de ONUSIDA 2.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - ONUSIDA",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-expomoda 2008.jpg",
+      imagePosition: "left",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - ONUSIDA",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-foto 2.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Foto 2",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-foto 3.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Foto 3",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-foto 5.jpg",
+      imagePosition: "left",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Foto 5",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-foto 7.jpg",
+      imagePosition: "left",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Foto 7",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-FOTO GRUPO FINAL 2.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Grupo Final",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-FOTO GRUPO FINAL.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Grupo Final",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-FOTO RUSA FINAL.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Rusa Final",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-GUIO DI COLOMBIA 1.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Guio Di Colombia",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-GUIO DI COLOMBIA 7.jpg",
+      imagePosition: "right",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Guio Di Colombia",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-jessica cediel FIDES.jpg",
+      imagePosition: "center",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Jessica Cediel",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-papaya mexico.jpg",
+      imagePosition: "left",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Papaya Mexico",
+    },
+    {
+      imagePath: "/src/assets/ANFASSA-MODA-vivir sin aire by ANFASSA.jpg",
+      imagePosition: "left",
+      imageAlt: "Anfassa - Concepto sin palabras - Moda - Vivir Sin Aire",
+    },
+  ],
+};
+---
+
+<Layout pageTitle="Anfassa | Concepto Sin Palabras">
+  <SwiperFullscreen data={home} />
+  <script src="../scripts/swiperFull.js"></script>
+</Layout>

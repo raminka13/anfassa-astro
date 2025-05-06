@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HolaleGrid from "../components/HolaleGrid.astro";
+
+const images = [
+  {
+    id: 1,
+    imagePath: "/src/assets/toscani -B yN.jpg",
+    imageAlt: "Oliviero Toscani Portrait",
+    title: "Oliviero Toscani",
+  },
+  {
+    id: 2,
+    imagePath: "/src/assets/vivir-sin-aire.jpg",
+    imageAlt: "Vivir Sin Aire - Fashion Photography",
+    title: "Vivir Sin Aire",
+  },
+  {
+    id: 3,
+    imagePath: "/src/assets/retratomindo-face.jpg",
+    imageAlt: "Portrait of Mindo",
+    title: "Retrato del Mindo",
+  },
+  {
+    id: 4,
+    imagePath: "/src/assets/macedonia-de-frutas.jpg",
+    imageAlt: "Macedonia de frutas - Food Photography",
+    title: "Macedonia de Frutas",
+  },
+  {
+    id: 5,
+    imagePath: "/src/assets/jessica-cediel-FIDES.jpg",
+    imageAlt: "Portrait of Jessica Cediel",
+    title: "Jessica Cediel",
+  },
+  {
+    id: 6,
+    imagePath: "/src/assets/ardilla-NY.jpg",
+    imageAlt: "Squirrel in Central Park",
+    title: "Ardilla NY",
+  },
+  {
+    id: 7,
+    imagePath: "/src/assets/_AFS0933.jpg",
+    imageAlt: "Architectural Photography",
+    title: "Arquitectura",
+  },
+  {
+    id: 8,
+    imagePath: "/src/assets/anfassa-foto-41.jpg",
+    imageAlt: "Anfassa Portrait",
+    title: "Retrato Anfassa",
+  },
+];
+---
+
+<Layout pageTitle="Anfassa | Holale Gallery">
+  <main class="container mx-auto py-8 px-4">
+    <h1 class="text-4xl font-bold mb-8 text-center">Holale Gallery</h1>
+    <HolaleGrid images={images} />
+  </main>
+
+  <script src="../scripts/modal.js"></script>
+</Layout>
