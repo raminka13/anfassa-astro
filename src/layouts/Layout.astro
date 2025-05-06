@@ -8,7 +8,7 @@ const { pageTitle } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es-CO" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -88,6 +88,7 @@ const { pageTitle } = Astro.props;
           header.classList.remove("opacity-0");
           header.classList.add("opacity-100");
           header.classList.remove("-translate-y-[100%]");
+          main.classList.remove("mt-0");
           main.classList.add("mt-20");
         }, 4500);
       }
